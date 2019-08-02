@@ -1,0 +1,59 @@
+<html>
+
+<head>
+	<!-- 金库页面语法仅支持ie7模式 🖕 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta charset="utf-8" />
+	<title>金库审批</title>
+</head>
+
+<body>
+	<iframe name="iframe1" id="iframe1" src="" scrolling="auto" frameborder="0" height="100%" width="100%"></iframe>
+	<form id="form" action="http://192.168.15.100:8080/uac/web3/jsp/goldbank/goldbank3!goldBankIframeAction.action" method="post" target="iframe1">
+		<input type="hidden" id="operCode" name="operCode" value="" />
+		<input type="hidden" id="mainLoginName" name="mainLoginName" value="" />
+		<input type="hidden" id="subLoginName" name="subLoginName" value="" />
+		<input type="hidden" id="operContent" name="operContent" value="" />
+		<input type="hidden" id="appCode" name="appCode" value="UAP" />
+		<input type="hidden" id="serverIp" name="serverIp" value="" />
+		<input type="hidden" id="serverPort" name="serverPort" value="" />
+		<input type="hidden" id="sessionId" name="sessionId" value="" />
+		<input type="hidden" id="checkSessionUrl" name="checkSessionUrl" value="" />
+		<input type="hidden" id="isBasedOnLogin" name="isBasedOnLogin" value="false" />
+		<input type="hidden" id="busyType" name="busyType" value="" />
+		<input type="hidden" id="systemId" name="systemId" value="" />
+		<input type="hidden" id="resAcctId" name="resAcctId" value="" />
+	</form>
+	<script>
+		if (window.location.protocol === 'https:') {
+			alert('请使用http访问');
+			throw new Error('请使用http访问');
+		}
+		var obj = window.dialogArguments;
+		//alert(obj.operCode);
+		document.getElementById("operCode").value = obj.operCode;
+		//alert(obj.mainLoginName);
+		document.getElementById("mainLoginName").value = obj.mainLoginName;
+		//alert(obj.subLoginName);
+		document.getElementById("subLoginName").value = obj.subLoginName;
+		//alert(obj.operContent);
+		document.getElementById("operContent").value = encodeURI(obj.operContent);
+		//alert(obj.appCode);
+		document.getElementById("appCode").value = obj.appCode;
+		document.getElementById("serverIp").value = obj.serverIp;
+		document.getElementById("serverPort").value = obj.serverPort;
+		document.getElementById("sessionId").value = obj.sessionId;
+		document.getElementById("checkSessionUrl").value = obj.checkSessionUrl;
+		document.getElementById("isBasedOnLogin").value = obj.isBasedOnLogin;
+		//alert(obj.busyType);
+		document.getElementById("busyType").value = obj.busyType;
+		//alert(obj.systemId);
+		document.getElementById("systemId").value = obj.systemId;
+		//alert(obj.resAcctId);
+		document.getElementById("resAcctId").value = obj.resAcctId;
+		document.getElementById("form").submit();
+
+	</script>
+</body>
+
+</html>

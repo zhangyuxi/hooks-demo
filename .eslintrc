@@ -1,0 +1,8 @@
+{
+	"extends": "eslint-config-iot",
+	"globals": {
+		"G": false,
+		"__uri": false,
+		"NodeRSA": false
+	}
+}

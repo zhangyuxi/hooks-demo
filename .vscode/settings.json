@@ -1,0 +1,29 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	"beautify.language": {
+		"js": {
+			"type": [
+				"javascript",
+				"json"
+			],
+			"filename": [
+				".jshintrc",
+				".jsbeautify"
+			]
+		},
+		"css": [
+			"css",
+			"scss",
+			"less"
+		],
+		"html": [
+			"htm",
+			"html"
+		]
+	},
+	"todoIgnore": [
+		"**/build/**",
+		"**/node_modules/**",
+		"**/js/lib/**"
+	]
+}

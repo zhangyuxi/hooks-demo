@@ -1,0 +1,22 @@
+{
+	"name": "hooks-demo",
+	"short_name": "hooks-demo",
+	"theme_color": "hooks-demo",
+	"background_color": "hooks-demo",
+	"display": "standalone",
+	"orientation": "portrait",
+	"Scope": "/hooks-demo/",
+	"start_url": "/hooks-demo/",
+	"icons": [{
+			"src": "/hooks-demo/icon-144x144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "/hooks-demo/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	],
+	"splash_pages": null
+}

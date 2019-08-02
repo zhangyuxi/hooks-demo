@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+	<script>var startTime = new Date();var startNow = window.performance ? performance.now() : 0;</script><!--ignore-->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>react hooks demo</title>
+	<!--<meta name="theme-color" content="xxx">
+	<meta name="mobile-web-app-capable" content=yes>
+	<meta name="application-name" content="xxx">
+	<meta name="msapplication-starturl" content="/xxx/">
+	<meta name="msapplication-navbutton-color" content="xxx">
+	<meta name="apple-mobile-web-app-capable" content=yes>
+	<meta name="apple-mobile-web-app-title" content="xxx">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel=manifest href="/xxx/manifest.json">
+	<link rel="apple-touch-icon" href="/static/img/favicon.ico">-->
+	<link rel="icon" href="/static/img/favicon.jpg" type="image/png">
+	<script>
+		(function() {
+			function setRootRem() {
+				// console.log(window.innerWidth)
+				document.documentElement.style.fontSize = window.innerWidth + 'px';
+			}
+			var timer = null;
+			window.addEventListener('resize', function() {
+				clearTimeout(timer);
+				timer = setTimeout(setRootRem, 300);
+			}, false);
+			window.addEventListener('pageshow', function(e) {
+				if (e.persisted) {
+					clearTimeout(timer);
+					timer = setTimeout(setRootRem, 300);
+				}
+			}, false);
+
+			window.addEventListener('DOMContentLoaded', setRootRem, false);
+			window.addEventListener('load', function() {
+				setTimeout(setRootRem, 300);
+			}, false);
+			//防止不明原因的bug。load之后再调用一次。
+
+			setRootRem();
+		})();
+	</script><!--ignore-->
+	<script>
+		(function() {
+			var ua = navigator.userAgent;
+			if (/(ipad|iphone).* applewebkit\/.* mobile/i.test(ua)) {
+				document.documentElement.classList.add('ios')
+			}
+		})();
+	</script><!--ignore-->
+	<link href="/static/build/main.css" rel="stylesheet">
+	<!--STYLE_PLACEHOLDER-->
+	{{css}}
+</head>
+
+<body>
+	<div id="react-wraper">{{html}}</div>
+	<script>
+		window.__uri = function(src) {
+			return src
+		};
+		window.G = JSON.parse('{{GStr}}');
+	</script>
+
+	<!--前端统计-->
+	<script src="/static/js/lib/monitor-inline.js?__inline"></script>
+	<!--脚本-->
+	<script src="/static/js/lib/babel-polyfill.js"></script>
+	<script src="/static/js/lib/bluebird.js"></script>
+	<script src="/static/js/lib/fetch.js"></script>
+	<script src="/static/js/lib/react.js"></script>
+	<script src="/static/js/lib/react-dom.js"></script>
+	<script src="/static/js/lib/qwrap/qwrap.helper.js"></script>
+	<script src="/static/build/main.js"></script>
+	<!--SCRIPT_PLACEHOLDER-->
+	{{js}}
+
+	<script>main();</script><!--ignore-->
+	<!--service worker-->
+	<!--因为请求开关获取异步响应，所以必然最后执行-->
+	<!--<script src="/static/js/lib/sw/register.js"></script>--><!--ignore-->
+	<!--友盟统计-->
+	<!--<style type="text/css">
+		a[title="站长统计"] {
+			display: none !important;
+		}
+	</style>
+	<script>
+		//声明_czc对象:
+		var _czc = _czc || [];
+		_czc.push(["_setAccount", "xxx"]); // 路尚： 1259940849； 行车卫士： 1263180822
+
+		window.monitor && document.addEventListener('mousedown', function(e) {
+			if (!monitor.data || !monitor.data.getClick) {
+				return;
+			}
+			var params = monitor.data.getClick(e);
+			if (params) {
+				// console.log('params', params)
+				_czc.push(["_trackEvent", 'action', 'click', params.c || params.f, null, params.cId]);
+			}
+		});
+		/* 异步加载统计，防止统计影响 loaded */
+		setTimeout(function() {
+			var script = document.createElement('script');
+			script.src = 'https://s11.cnzz.com/z_stat.php?id=1259940849&web_id=1259940849'; // 路尚： 1259940849； 行车卫士： 1263180822
+			document.body.appendChild(script);
+		}, 10);
+	</script>--><!--ignore-->
+</body>
+
+</html>

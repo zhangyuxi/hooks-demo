@@ -1,0 +1,83 @@
+.layout {
+	min-width: 1140px;
+	height: 100%;
+	background: #eaeaea;
+	.header {
+		background-color: #2b549f;
+	}
+	.content {
+		.option {
+			display: flex;
+			justify-content: space-between;
+			padding: 20px;
+			.form-inline {
+				position: relative;
+				overflow: hidden;
+				margin-top: -16px;
+				width: 100%;
+				.fieldset {
+					padding-right: 200px;
+					width: 100%;
+					.form-group {
+						margin-top: 10px;
+					}
+				}
+				.fieldset+.fieldset {
+					margin-top: 16px;
+				}
+				.form-operation {
+					height: 100%;
+					position: absolute;
+					text-align: right;
+					right: 0;
+				}
+				.form-oper-btn {
+					line-height: 32px;
+					padding: 0 28px;
+				}
+				.form-oper-row+.form-oper-row {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+				.form-oper-row-multi {
+					width: 220px;
+				}
+				.form-group > div {
+					display: inline-block;
+				}
+				.inline-icon {
+					cursor: pointer;
+				}
+			}
+			.add-btn {
+				white-space: nowrap;
+			}
+		}
+		.list-content {
+			padding: 40px 20px 20px 20px;
+			background: #eaeaea;
+			.list-item-content{
+				height: 150px;
+				.content-item {
+					word-break: keep-all;
+					display: flex;
+					.value-text {
+						max-width: 120px;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+					.value-text-time {
+						display: block;
+						width: 120px;
+						word-wrap: break-word;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		background: #fff;
+	}
+}

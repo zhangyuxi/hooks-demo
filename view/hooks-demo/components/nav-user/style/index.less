@@ -1,0 +1,75 @@
+@import '~view/hooks-demo/style/themes.less';
+.ant-layout-header{
+	padding: 0;
+    height: 70px;
+	line-height: 70px;
+}
+.header{
+	background: #fff!important;
+	box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+.nav-top {
+    height: 70px;
+	padding-right: 24px;
+	.align-right{
+		float: right;
+		.intl-i{
+			padding: 0 12px;
+			cursor: pointer;
+			display: inline-block;
+			transition: all .3s;
+			i{
+				font-size: 21px!important;
+				height: 48px;
+			}
+		}
+		a{
+			color: #000000a6;
+			height: 100%;
+			display: inline-block;
+		}
+		a:hover{
+			background-color: #f8f9fb;
+		}
+		.user-name{
+			margin: 0 6px;
+		}
+		.nav-login{
+			a{
+				color: @tssp-nav-color;
+				font-size: 18px;
+				background: #e7e7e7;
+				height: 38px;
+				width: 90px;
+				display: inline-block;
+				margin-top: 18px;
+				text-align: center;
+				line-height: 38px;
+				border-radius: 20px;
+			}
+			a:hover{
+				color: #1129ef;
+			}
+			a+a{
+				margin-left: 8px;
+			}
+		}
+	}
+	.trigger {
+		font-size: 18px;
+		line-height: 64px;
+		padding: 0 24px;
+		cursor: pointer;
+		transition: color .3s;
+	}
+
+	.trigger:hover {
+		color: #1890ff;
+	}
+
+	.logo {
+		height: 32px;
+		background: rgba(255,255,255,.2);
+		margin: 16px;
+	}
+}

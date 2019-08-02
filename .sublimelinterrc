@@ -1,0 +1,9 @@
+{
+    "linters": {
+        "eslint": {
+            "@disable": false,
+            "args": [],
+            "excludes": []
+        }
+    }
+}

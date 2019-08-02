@@ -1,0 +1,10 @@
+{
+	"version": "1.0.1",
+	"configurations": {
+		"defaultModule": "hooks-demo",
+		"project": "iot_hooks-demo",
+		"port": 8360,
+		"reactLoadableInfoPath": "/react-loadable.json",
+		"publicPath": "/hooks-demo/static/pkg/"
+	}
+}

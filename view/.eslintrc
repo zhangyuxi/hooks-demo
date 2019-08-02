@@ -1,0 +1,10 @@
+{
+	"globals": {
+		"apiInfo": false,
+		"window": false,
+		"document": false,
+		"noop": false
+	},
+	"rules": {
+	}
+}

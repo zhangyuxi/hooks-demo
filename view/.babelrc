@@ -1,0 +1,50 @@
+{
+	"presets": [
+		[
+			"env",
+			{
+				"targets": {
+					"node": 4
+				},
+				"loose": true,
+				"modules": "commonjs"
+			}
+		],
+		"stage-1",
+		"react"
+	],
+	"plugins": [
+		[
+			"react-css-modules",
+			{
+				"filetypes": {
+					".less": {
+						"syntax": "postcss-less"
+					}
+				},
+				"removeImport": true
+			}
+		],
+		"transform-runtime",
+		"transform-decorators-legacy",
+		"dynamic-import-node",
+		[
+			"import",
+			[
+				{
+					"libraryName": "antd"
+				},
+				{
+					"libraryName": "antd-mobile"
+				}
+			]
+		],
+		[
+			"webpack-alias",
+			{
+				"config": "../webpack.config.production.js"
+			}
+		],
+		"react-loadable/babel"
+	]
+}
